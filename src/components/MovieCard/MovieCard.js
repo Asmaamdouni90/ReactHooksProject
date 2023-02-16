@@ -1,6 +1,7 @@
 import React from "react";
 import ReactStars from "react-stars";
 import "./MovieCard.css";
+import { Link } from "react-router-dom";
 
 const MovieCard = ({ movie }) => {
   return (
@@ -15,6 +16,9 @@ const MovieCard = ({ movie }) => {
         value={movie.rating}
         edit={false}
       />
+      <Link to={`/movie/${movie.id}`}>
+        <h5>See More</h5>
+      </Link>
     </div>
   );
 };
